@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'a:\IDAT\Ciclo_2\Certificador\Inventario_py\Inventario_py\ui\menu.ui'
+# Form implementation generated from reading ui file 'menu.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -52,8 +52,8 @@ class Ui_MainWindow(object):
         self.btn_inicio.setGeometry(QtCore.QRect(26, 90, 196, 40))
         self.btn_inicio.setStyleSheet("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_off_home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        icon.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_on_home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
+        icon.addPixmap(QtGui.QPixmap("../ressources/img/icon_off_home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("../ressources/img/icon_on_home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
         self.btn_inicio.setIcon(icon)
         self.btn_inicio.setCheckable(True)
         self.btn_inicio.setChecked(True)
@@ -63,8 +63,8 @@ class Ui_MainWindow(object):
         self.btn_inventario.setGeometry(QtCore.QRect(26, 160, 196, 40))
         self.btn_inventario.setStyleSheet("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_off_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        icon1.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_on_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
+        icon1.addPixmap(QtGui.QPixmap("../ressources/img/icon_off_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("../ressources/img/icon_on_inventario.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
         self.btn_inventario.setIcon(icon1)
         self.btn_inventario.setCheckable(True)
         self.btn_inventario.setAutoExclusive(True)
@@ -73,8 +73,8 @@ class Ui_MainWindow(object):
         self.btn_proveedores.setGeometry(QtCore.QRect(26, 230, 196, 40))
         self.btn_proveedores.setStyleSheet("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_off_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        icon2.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_on_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
+        icon2.addPixmap(QtGui.QPixmap("../ressources/img/icon_off_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("../ressources/img/icon_on_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.On)
         self.btn_proveedores.setIcon(icon2)
         self.btn_proveedores.setCheckable(True)
         self.btn_proveedores.setAutoExclusive(True)
@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
         self.btn_usuarios.setGeometry(QtCore.QRect(26, 300, 196, 40))
         self.btn_usuarios.setStyleSheet("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_off_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("../ressources/img/icon_off_proveedor.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_usuarios.setIcon(icon3)
         self.btn_usuarios.setCheckable(True)
         self.btn_usuarios.setAutoExclusive(True)
@@ -120,10 +120,15 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet("QLabel {\n"
 "}")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/pic_profile.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("../resources/img/pic_profile.png"))
         self.label_2.setObjectName("label_2")
         self.stackedWidget = QtWidgets.QStackedWidget(parent=self.mainbar)
         self.stackedWidget.setGeometry(QtCore.QRect(0, 109, 1051, 591))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
+        self.stackedWidget.setSizePolicy(sizePolicy)
         self.stackedWidget.setObjectName("stackedWidget")
         self.inicio_page = QtWidgets.QWidget()
         self.inicio_page.setObjectName("inicio_page")
@@ -173,7 +178,7 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QtCore.QRect(82, 25, 31, 28))
         self.label_9.setStyleSheet("")
         self.label_9.setText("")
-        self.label_9.setPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_warning.png"))
+        self.label_9.setPixmap(QtGui.QPixmap("../resources/img/icon_warning.png"))
         self.label_9.setObjectName("label_9")
         self.label_10 = QtWidgets.QLabel(parent=self.w_problemas)
         self.label_10.setGeometry(QtCore.QRect(28, 63, 211, 16))
@@ -201,7 +206,7 @@ class Ui_MainWindow(object):
         self.label_15.setGeometry(QtCore.QRect(82, 25, 31, 28))
         self.label_15.setStyleSheet("")
         self.label_15.setText("")
-        self.label_15.setPixmap(QtGui.QPixmap("a:\\IDAT\\Ciclo_2\\Certificador\\Inventario_py\\Inventario_py\\ui\\../ressources/img/icon_waiting.png"))
+        self.label_15.setPixmap(QtGui.QPixmap("../resources/img/icon_waiting.png"))
         self.label_15.setObjectName("label_15")
         self.label_16 = QtWidgets.QLabel(parent=self.w_problemas_2)
         self.label_16.setGeometry(QtCore.QRect(28, 63, 211, 16))
@@ -227,7 +232,7 @@ class Ui_MainWindow(object):
 "")
         self.label_17.setObjectName("label_17")
         self.comboBox = QtWidgets.QComboBox(parent=self.inicio_page)
-        self.comboBox.setGeometry(QtCore.QRect(840, 240, 180, 26))
+        self.comboBox.setGeometry(QtCore.QRect(640, 240, 180, 26))
         self.comboBox.setStyleSheet("QComboBox {\n"
 "    color:#fff;\n"
 "    border:none;\n"
@@ -256,51 +261,146 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+        self.tableView_estado_inventario = QtWidgets.QTableView(parent=self.inicio_page)
+        self.tableView_estado_inventario.setGeometry(QtCore.QRect(30, 280, 991, 281))
+        self.tableView_estado_inventario.setStyleSheet("")
+        self.tableView_estado_inventario.setObjectName("tableView_estado_inventario")
+        self.comboBox_2 = QtWidgets.QComboBox(parent=self.inicio_page)
+        self.comboBox_2.setGeometry(QtCore.QRect(840, 240, 180, 26))
+        self.comboBox_2.setStyleSheet("QComboBox {\n"
+"    color:#fff;\n"
+"    border:none;\n"
+"    font-size:11px;\n"
+"    background-color:#1D1F20;\n"
+"    border-radius:5px;\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    width: 20px;           /* espacio visible para la flecha */\n"
+"      color:#fff;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background-color:#1D1F20;\n"
+"    selection-color: white;\n"
+"    border:none;\n"
+"}\n"
+"\n"
+"")
+        self.comboBox_2.setObjectName("comboBox_2")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
+        self.comboBox_2.addItem("")
         self.stackedWidget.addWidget(self.inicio_page)
         self.inventario_page = QtWidgets.QWidget()
         self.inventario_page.setObjectName("inventario_page")
-        self.label_5 = QtWidgets.QLabel(parent=self.inventario_page)
-        self.label_5.setGeometry(QtCore.QRect(490, 230, 151, 41))
+        self.lbl_title_inventario = QtWidgets.QLabel(parent=self.inventario_page)
+        self.lbl_title_inventario.setGeometry(QtCore.QRect(490, 230, 151, 41))
         font = QtGui.QFont()
         font.setFamily("Open Sans")
         font.setPointSize(12)
-        self.label_5.setFont(font)
-        self.label_5.setStyleSheet("color:#fff;")
-        self.label_5.setObjectName("label_5")
+        self.lbl_title_inventario.setFont(font)
+        self.lbl_title_inventario.setStyleSheet("color:#fff;")
+        self.lbl_title_inventario.setObjectName("lbl_title_inventario")
         self.stackedWidget.addWidget(self.inventario_page)
         self.proveedores_page = QtWidgets.QWidget()
         self.proveedores_page.setObjectName("proveedores_page")
-        self.label_6 = QtWidgets.QLabel(parent=self.proveedores_page)
-        self.label_6.setGeometry(QtCore.QRect(600, 240, 151, 41))
+        self.lbl_title_proveedores = QtWidgets.QLabel(parent=self.proveedores_page)
+        self.lbl_title_proveedores.setGeometry(QtCore.QRect(600, 240, 151, 41))
         font = QtGui.QFont()
         font.setFamily("Open Sans")
         font.setPointSize(12)
-        self.label_6.setFont(font)
-        self.label_6.setStyleSheet("color:#fff;")
-        self.label_6.setObjectName("label_6")
+        self.lbl_title_proveedores.setFont(font)
+        self.lbl_title_proveedores.setStyleSheet("color:#fff;")
+        self.lbl_title_proveedores.setObjectName("lbl_title_proveedores")
         self.stackedWidget.addWidget(self.proveedores_page)
         self.usuarios_page = QtWidgets.QWidget()
         self.usuarios_page.setObjectName("usuarios_page")
-        self.label_7 = QtWidgets.QLabel(parent=self.usuarios_page)
-        self.label_7.setGeometry(QtCore.QRect(670, 220, 151, 41))
+        self.label_users_content = QtWidgets.QLabel(parent=self.usuarios_page)
+        self.label_users_content.setGeometry(QtCore.QRect(670, 220, 151, 41))
         font = QtGui.QFont()
         font.setFamily("Open Sans")
         font.setPointSize(12)
-        self.label_7.setFont(font)
-        self.label_7.setStyleSheet("color:#fff;")
-        self.label_7.setObjectName("label_7")
+        self.label_users_content.setFont(font)
+        self.label_users_content.setStyleSheet("color:#fff;")
+        self.label_users_content.setObjectName("label_users_content")
         self.stackedWidget.addWidget(self.usuarios_page)
         self.estados_page = QtWidgets.QWidget()
         self.estados_page.setObjectName("estados_page")
-        self.label_3 = QtWidgets.QLabel(parent=self.estados_page)
-        self.label_3.setGeometry(QtCore.QRect(370, 200, 151, 41))
+        self.label_11 = QtWidgets.QLabel(parent=self.estados_page)
+        self.label_11.setGeometry(QtCore.QRect(32, 45, 321, 41))
         font = QtGui.QFont()
         font.setFamily("Open Sans")
-        font.setPointSize(12)
-        self.label_3.setFont(font)
-        self.label_3.setStyleSheet("color:#fff;")
-        self.label_3.setObjectName("label_3")
+        font.setPointSize(-1)
+        font.setBold(False)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("QLabel {\n"
+"    color:#fff;\n"
+"    font-size:14px;\n"
+"    font-weight:100;\n"
+"}\n"
+"\n"
+"")
+        self.label_11.setObjectName("label_11")
+        self.label_estados_titulo = QtWidgets.QLabel(parent=self.estados_page)
+        self.label_estados_titulo.setGeometry(QtCore.QRect(32, 0, 151, 41))
+        font = QtGui.QFont()
+        font.setFamily("Open Sans")
+        font.setPointSize(-1)
+        self.label_estados_titulo.setFont(font)
+        self.label_estados_titulo.setStyleSheet("QLabel {\n"
+"    color:#fff;\n"
+"    font-size:28px;\n"
+"}\n"
+"\n"
+"")
+        self.label_estados_titulo.setObjectName("label_estados_titulo")
+        self.tableView_estado = QtWidgets.QTableView(parent=self.estados_page)
+        self.tableView_estado.setGeometry(QtCore.QRect(30, 150, 991, 401))
+        self.tableView_estado.setStyleSheet("")
+        self.tableView_estado.setObjectName("tableView_estado")
+        self.btnAgregar = QtWidgets.QPushButton(parent=self.estados_page)
+        self.btnAgregar.setGeometry(QtCore.QRect(740, 100, 78, 36))
+        self.btnAgregar.setStyleSheet("QPushButton {\n"
+"    color: #111315;\n"
+"    background-color: #42BE65;\n"
+"    border: none;\n"
+"    border-radius: 3.5px;\n"
+"    font-weight: 600;\n"
+"}")
+        self.btnAgregar.setIconSize(QtCore.QSize(16, 16))
+        self.btnAgregar.setObjectName("btnAgregar")
+        self.btnEliminar = QtWidgets.QPushButton(parent=self.estados_page)
+        self.btnEliminar.setGeometry(QtCore.QRect(840, 100, 78, 36))
+        self.btnEliminar.setStyleSheet("QPushButton {\n"
+"    color: #111315;\n"
+"    background-color: #FA4D56;\n"
+"    border: none;\n"
+"    border-radius: 3.5px;\n"
+"    font-weight: 600;\n"
+"}")
+        self.btnEliminar.setIconSize(QtCore.QSize(16, 16))
+        self.btnEliminar.setObjectName("btnEliminar")
+        self.btnEditar = QtWidgets.QPushButton(parent=self.estados_page)
+        self.btnEditar.setGeometry(QtCore.QRect(940, 100, 78, 36))
+        self.btnEditar.setStyleSheet("QPushButton {\n"
+"    color: #111315;\n"
+"    background-color: #6468C1;\n"
+"    border: none;\n"
+"    border-radius: 3.5px;\n"
+"    font-weight: 600;\n"
+"}")
+        self.btnEditar.setIconSize(QtCore.QSize(16, 16))
+        self.btnEditar.setObjectName("btnEditar")
         self.stackedWidget.addWidget(self.estados_page)
+        self.label_welcome = QtWidgets.QLabel(parent=self.mainbar)
+        self.label_welcome.setGeometry(QtCore.QRect(30, 20, 171, 16))
+        self.label_welcome.setStyleSheet("color:#fff;")
+        self.label_welcome.setText("")
+        self.label_welcome.setObjectName("label_welcome")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -323,13 +423,22 @@ class Ui_MainWindow(object):
         self.label_14.setText(_translate("MainWindow", "18"))
         self.label_16.setText(_translate("MainWindow", "Materiales por expirar"))
         self.label_17.setText(_translate("MainWindow", "Estado de Inventario"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "Selecciona estado"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "Todos los estados"))
         self.comboBox.setItemText(1, _translate("MainWindow", "---"))
         self.comboBox.setItemText(2, _translate("MainWindow", "Urgente"))
         self.comboBox.setItemText(3, _translate("MainWindow", "Baja prioridad"))
         self.comboBox.setItemText(4, _translate("MainWindow", "Completado"))
         self.comboBox.setItemText(5, _translate("MainWindow", "En progreso"))
-        self.label_5.setText(_translate("MainWindow", "Inventario"))
-        self.label_6.setText(_translate("MainWindow", "Proveedores"))
-        self.label_7.setText(_translate("MainWindow", "Usuarios"))
-        self.label_3.setText(_translate("MainWindow", "Estados"))
+        self.comboBox_2.setItemText(0, _translate("MainWindow", "Últimos 7 días"))
+        self.comboBox_2.setItemText(1, _translate("MainWindow", "---"))
+        self.comboBox_2.setItemText(2, _translate("MainWindow", "Hoy"))
+        self.comboBox_2.setItemText(3, _translate("MainWindow", "Última semana"))
+        self.comboBox_2.setItemText(4, _translate("MainWindow", "Último mes"))
+        self.lbl_title_inventario.setText(_translate("MainWindow", "Inventario"))
+        self.lbl_title_proveedores.setText(_translate("MainWindow", "Proveedores"))
+        self.label_users_content.setText(_translate("MainWindow", "Usuarios"))
+        self.label_11.setText(_translate("MainWindow", "Gestiona los estados de tu inventario"))
+        self.label_estados_titulo.setText(_translate("MainWindow", "Estados"))
+        self.btnAgregar.setText(_translate("MainWindow", "Agregar"))
+        self.btnEliminar.setText(_translate("MainWindow", "Eliminar"))
+        self.btnEditar.setText(_translate("MainWindow", "Editar"))

@@ -62,7 +62,7 @@
 }</string>
    </property>
    <property name="echoMode">
-    <enum>QLineEdit::Normal</enum>
+    <enum>QLineEdit::Password</enum>
    </property>
    <property name="placeholderText">
     <string>Ingresa tu contraseña</string>
@@ -200,6 +200,19 @@
      <pixmap>../resources/img/pic_login_2.png</pixmap>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_message">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>640</y>
+     <width>301</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

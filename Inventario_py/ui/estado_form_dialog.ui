@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Estado_form_dialog</class>
+ <widget class="QDialog" name="Estado_form_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>355</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Formulario</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #26282A;
+}</string>
+  </property>
+  <widget class="QLabel" name="lbl_titulo">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+font-size:16px;</string>
+   </property>
+   <property name="text">
+    <string>Agregar Estado de Inventario</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_asunto">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>83</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+font-size:14px;</string>
+   </property>
+   <property name="text">
+    <string>Asunto: </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_asunto">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>78</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+	background-color: #1D1F20;
+	border-radius:7px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_descripcion">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>128</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+font-size:14px;</string>
+   </property>
+   <property name="text">
+    <string>Descripción</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txt_descripcion">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>124</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+	background-color: #1D1F20;
+	border-radius:7px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_estado">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>172</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+font-size:14px;</string>
+   </property>
+   <property name="text">
+    <string>Estado</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbo_estado">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>170</y>
+     <width>311</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+	color:#fff;
+	border:none;
+	font-size:11px;
+	background-color:#1D1F20;
+	border-radius:7px;
+}
+
+QComboBox::drop-down {
+    width: 20px;           /* espacio visible para la flecha */
+  	color:#fff;
+}
+
+QComboBox QAbstractItemView {
+    color: white;
+    background-color:#1D1F20;
+    selection-color: white;
+	border:none;
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Selecciona un estado</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>---</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Urgente</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baja prioridad</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Completado</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>En progreso</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>230</y>
+     <width>78</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	color: #111315;
+	background-color: #42BE65;
+	border: none;
+	border-radius: 3.5px;
+	font-weight: 600;
+}</string>
+   </property>
+   <property name="text">
+    <string>Agregar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancelar">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>230</y>
+     <width>78</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	color: #fff;
+	background-color: #1D1F20;
+	border: none;
+	border-radius: 3.5px;
+	font-weight: 600;
+}</string>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

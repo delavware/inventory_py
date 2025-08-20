@@ -274,7 +274,7 @@ QPushButton:checked {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../ressources/img/pic_profile.png</pixmap>
+       <pixmap>../resources/img/pic_profile.png</pixmap>
       </property>
      </widget>
     </widget>
@@ -286,6 +286,12 @@ QPushButton:checked {
        <width>1051</width>
        <height>591</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <widget class="QWidget" name="inicio_page">
       <widget class="QLabel" name="label_4">
@@ -394,7 +400,7 @@ QPushButton:checked {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../ressources/img/icon_warning.png</pixmap>
+         <pixmap>../resources/img/icon_warning.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="label_10">
@@ -468,7 +474,7 @@ QPushButton:checked {
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../ressources/img/icon_waiting.png</pixmap>
+         <pixmap>../resources/img/icon_waiting.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="label_16">
@@ -524,6 +530,82 @@ QPushButton:checked {
       <widget class="QComboBox" name="comboBox">
        <property name="geometry">
         <rect>
+         <x>640</x>
+         <y>240</y>
+         <width>180</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+	color:#fff;
+	border:none;
+	font-size:11px;
+	background-color:#1D1F20;
+	border-radius:5px;
+}
+
+QComboBox::drop-down {
+    width: 20px;           /* espacio visible para la flecha */
+  	color:#fff;
+}
+
+QComboBox QAbstractItemView {
+    color: white;
+    background-color:#1D1F20;
+    selection-color: white;
+	border:none;
+}
+
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Todos los estados</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>---</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Urgente</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Baja prioridad</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Completado</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>En progreso</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QTableView" name="tableView_estado_inventario">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>280</y>
+         <width>991</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="geometry">
+        <rect>
          <x>840</x>
          <y>240</y>
          <width>180</width>
@@ -555,7 +637,7 @@ QComboBox QAbstractItemView {
        </property>
        <item>
         <property name="text">
-         <string>Selecciona estado</string>
+         <string>Últimos 7 días</string>
         </property>
        </item>
        <item>
@@ -565,28 +647,23 @@ QComboBox QAbstractItemView {
        </item>
        <item>
         <property name="text">
-         <string>Urgente</string>
+         <string>Hoy</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Baja prioridad</string>
+         <string>Última semana</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Completado</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>En progreso</string>
+         <string>Último mes</string>
         </property>
        </item>
       </widget>
      </widget>
      <widget class="QWidget" name="inventario_page">
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="lbl_title_inventario">
        <property name="geometry">
         <rect>
          <x>490</x>
@@ -610,7 +687,7 @@ QComboBox QAbstractItemView {
       </widget>
      </widget>
      <widget class="QWidget" name="proveedores_page">
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="lbl_title_proveedores">
        <property name="geometry">
         <rect>
          <x>600</x>
@@ -634,7 +711,7 @@ QComboBox QAbstractItemView {
       </widget>
      </widget>
      <widget class="QWidget" name="usuarios_page">
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="label_users_content">
        <property name="geometry">
         <rect>
          <x>670</x>
@@ -658,11 +735,40 @@ QComboBox QAbstractItemView {
       </widget>
      </widget>
      <widget class="QWidget" name="estados_page">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_11">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>200</y>
+         <x>32</x>
+         <y>45</y>
+         <width>321</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>-1</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color:#fff;
+	font-size:14px;
+	font-weight:100;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Gestiona los estados de tu inventario</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_estados_titulo">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>0</y>
          <width>151</width>
          <height>41</height>
         </rect>
@@ -670,17 +776,135 @@ QComboBox QAbstractItemView {
        <property name="font">
         <font>
          <family>Open Sans</family>
-         <pointsize>12</pointsize>
+         <pointsize>-1</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:#fff;</string>
+        <string notr="true">QLabel {
+	color:#fff;
+	font-size:28px;
+}
+
+</string>
        </property>
        <property name="text">
         <string>Estados</string>
        </property>
       </widget>
+      <widget class="QTableView" name="tableView_estado">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>991</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnAgregar">
+       <property name="geometry">
+        <rect>
+         <x>740</x>
+         <y>100</y>
+         <width>78</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: #111315;
+	background-color: #42BE65;
+	border: none;
+	border-radius: 3.5px;
+	font-weight: 600;
+}</string>
+       </property>
+       <property name="text">
+        <string>Agregar</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEliminar">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>100</y>
+         <width>78</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: #111315;
+	background-color: #FA4D56;
+	border: none;
+	border-radius: 3.5px;
+	font-weight: 600;
+}</string>
+       </property>
+       <property name="text">
+        <string>Eliminar</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEditar">
+       <property name="geometry">
+        <rect>
+         <x>940</x>
+         <y>100</y>
+         <width>78</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: #111315;
+	background-color: #6468C1;
+	border: none;
+	border-radius: 3.5px;
+	font-weight: 600;
+}</string>
+       </property>
+       <property name="text">
+        <string>Editar</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+      </widget>
      </widget>
+    </widget>
+    <widget class="QLabel" name="label_welcome">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </widget>
   </widget>
